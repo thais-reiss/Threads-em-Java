@@ -6,8 +6,9 @@ import java.util.concurrent.TimeUnit;
 
 public class PoolDeThreads {
     public static void main(String[] args) throws InterruptedException {
-        ExecutorService pool = Executors.newFixedThreadPool(4);
+       // ExecutorService pool = Executors.newFixedThreadPool(4);
         
+       ExecutorService pool = Executors.newCachedThreadPool();
         long inicio = System.currentTimeMillis();
 
         for (int i = 0; i < 10; i++) {

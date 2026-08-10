@@ -10,6 +10,7 @@ public class VirtualThreads {
 
             for (int i = 0; i < total; i++) {
                 executor.submit(() -> {
+                   System.out.println(Thread.currentThread()); 
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
